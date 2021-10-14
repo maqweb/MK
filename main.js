@@ -18,6 +18,8 @@ let player2 = {
     }
 }
 
+const $arenas = document.querySelector('.arenas')
+
 function createPlayer(player, obj) {
     const $player = document.createElement('div')
     $player.classList.add(player)
@@ -47,7 +49,6 @@ function createPlayer(player, obj) {
     $player.appendChild($progressbar)
     $player.appendChild($character)
 
-    const $arenas = document.querySelector('.arenas')
     $arenas.appendChild($player)
 }
 
