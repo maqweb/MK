@@ -53,7 +53,7 @@ function createPlayer(playerObj) {
 
 function playerWin(player) {
     const $winTitle = createElement('div', 'winTitle')
-    $winTitle.innerText = player + ' win'
+    $winTitle.innerText = player + ' wins'
     return $winTitle
 }
 
@@ -81,9 +81,16 @@ function changeHP(player) {
     }
 }
 
+let playerArr = [player1, player2]
+
+function randomPlayer(arr) {
+    const index = Math.floor(Math.random() * 2)
+    console.log(arr[index])
+    return arr[index]
+}
+
 $randomButton.addEventListener('click', function () {
-    changeHP(player1)
-    changeHP(player2)
+    changeHP(randomPlayer(playerArr))
 })
 
 $arenas.appendChild(createPlayer(player1))
