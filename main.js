@@ -51,10 +51,18 @@ function createPlayer(playerObj) {
     return $player
 }
 
-function playerWin(player) {
+function playerWin() {
+    debugger
     const $winTitle = createElement('div', 'winTitle')
-    $winTitle.innerText = player + ' wins'
-    return $winTitle
+    let playerName;
+    if (player1.hp === 0) {
+        playerName = player2.name
+    }
+    if (player2.hp === 0) {
+        playerName = player1.name
+    }
+    $winTitle.innerText = playerName + ' wins'
+    $arenas.appendChild($winTitle)
 }
 
 function randomNum () {
@@ -69,15 +77,9 @@ function changeHP(player) {
         player.hp = 0
     }
     $playerLife.style.width = player.hp + '%';
-    console.log('player:', player.name, '/ HP:', player.hp, '/ W:', $playerLife.style.width)
     if (player.hp === 0) {
         $randomButton.disabled = true
-        if (player1.hp === 0) {
-            $arenas.appendChild(playerWin(player2.name))
-        } else {
-            $arenas.appendChild(playerWin(player1.name))
-        }
-
+        playerWin()
     }
 }
 
