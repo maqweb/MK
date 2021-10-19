@@ -118,17 +118,16 @@ $randomButton.addEventListener('click', function () {
 
     if (player1.hp === 0 || player2.hp === 0) {
         $randomButton.disabled = true
+        createReloadButton()
     }
 
     if (player1.hp === 0 && player1.hp < player2.hp) {
         $arenas.appendChild(playerWin(player2.name))
-        createReloadButton()
+
     } else if (player2.hp === 0 && player2.hp < player1.hp) {
         $arenas.appendChild(playerWin(player1.name))
-        createReloadButton()
     } else if (player1.hp === 0 && player2.hp === 0) {
         $arenas.appendChild(playerWin())
-        createReloadButton()
     }
 })
 
