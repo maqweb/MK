@@ -12,7 +12,7 @@ const ATTACK = ['head', 'body', 'foot'];
 let player1 = {
     player: 1,
     name: 'Scorpion',
-    hp: 10,
+    hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
     weapon: ['Chain', 'Kunai'],
     attack: function () {
@@ -26,7 +26,7 @@ let player1 = {
 let player2 = {
     player: 2,
     name: 'Sub-Zero',
-    hp: 10,
+    hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
     weapon: ['Ice', 'Shuriken'],
     attack: function () {
