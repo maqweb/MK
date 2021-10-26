@@ -200,19 +200,19 @@ function generateLogs(type, player1, player2) {
             break;
         }
         case 'hit': {
-            const text = `${getData()} ${logs[type][getRandomNum(18)].replace('[playerDefence]', player1.name).replace('[playerKick]', player2.name)} / ${player1.name} - ${player1.hp}HP`
+            const text = `${getData()} ${logs[type][getRandomNum(logs.hit.length)].replace('[playerDefence]', player1.name).replace('[playerKick]', player2.name)} / ${player1.name} - ${player1.hp}HP`
             const el = `<p>${text}</p>`
             $chat.insertAdjacentHTML('afterbegin', el)
             break;
         }
         case 'defence': {
-            const text = `${getData()} ${logs[type][getRandomNum(8)].replace('[playerKick]', player1.name).replace('[playerDefence]', player2.name)}`
+            const text = `${getData()} ${logs[type][getRandomNum(logs.defence.length)].replace('[playerKick]', player1.name).replace('[playerDefence]', player2.name)}`
             const el = `<p>${text}</p>`
             $chat.insertAdjacentHTML('afterbegin', el)
             break;
         }
         case 'end': {
-            const text = `${getData()} ${logs[type][getRandomNum(3)].replace('[playerWins]', player1.name).replace('[playerLose]', player2.name)}`
+            const text = `${getData()} ${logs[type][getRandomNum(logs.end.length)].replace('[playerWins]', player1.name).replace('[playerLose]', player2.name)}`
             const el = `<p>${text}</p>`
             $chat.insertAdjacentHTML('afterbegin', el)
             break;
