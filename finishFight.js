@@ -1,7 +1,7 @@
 import {player1, player2} from "./player.js";
 import {createReloadButton} from "./createReloadButton.js";
 import {generateLogs} from "./logs.js";
-import {$arenas, $fightButton} from "./main.js";
+import {$arenas, $fightButton} from "./variables.js";
 import {createElement} from "./createElement.js";
 
 export const playerWin = (name) => {

@@ -1,5 +1,5 @@
 import {getData, getRandomNum} from "./utils.js";
-import {$chat} from "./main.js";
+import {$chat} from "./variables.js";
 
 export const logs = {
     start: 'Часы показывали [time], когда [player1] и [player2] бросили вызов друг другу.',

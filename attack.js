@@ -1,5 +1,5 @@
 import {getRandomNum} from "./utils.js";
-import {$formFight, ATTACK, HIT} from "./main.js";
+import {$formFight, ATTACK, HIT} from "./variables.js";
 
 export const enemyAttack = () => {
     const hit = ATTACK[getRandomNum(3)]
