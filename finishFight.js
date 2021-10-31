@@ -1,8 +1,8 @@
-import {player1, player2} from "./player.js";
 import {createReloadButton} from "./createReloadButton.js";
 import {generateLogs} from "./logs.js";
 import {$arenas, $fightButton} from "./variables.js";
 import {createElement} from "./createElement.js";
+import {player1, player2} from "./game.js";
 
 export const playerWin = (name) => {
     const $winTitle = createElement('div', 'winTitle')
